@@ -49,7 +49,7 @@ class summariser {
 		return $this->string;
 	}
 	function s_split() {
-		$this->s_array = preg_split("/(?<=[^A-Z][.?!][^a-z])/",$this->string);
+		$this->s_array = preg_split("/(?<=[^\"][.?!][ ][^a-z])/",$this->string);
 		for ($i = 0; $i < count($this->s_array); $i++) {
 			$this->s_array[$i] = strip_tags($this->s_array[$i]);
 			if (strpos($this->s_array[$i], "*") !== false) {
